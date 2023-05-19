@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <h2>Créaton d'un nouveau livre</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-0 col-sm-0 col-md-1 col-lg-2">{#rien c'est une marge#}</div>
+            <div class="col-12 col-sm12 col-md-10 col-lg-8">
+            
+            {{form(form)}}
+            </div>
+            <div class="col-0 col-sm-0 col-md-1 col-lg-2">{#rien c'est une marge#}</div>
+        </div>
+    </div>
+    
+{% endblock %}

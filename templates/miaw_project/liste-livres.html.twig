@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Livre</h1>
+    <ul>
+    {% for livre in livres %}
+        <li>{{livre.id}} : {{ livre.titre }}</li>
+        <li>{{livre.datepublication | date("d/m/Y")}}</li>
+        <li><a href="{{ path('show_livre', {'uid':livre.id}) }}">{{ livre.titre }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
